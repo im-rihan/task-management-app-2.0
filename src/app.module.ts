@@ -16,7 +16,7 @@ import { configValidationSchema } from './config.schema';
 			imports: [ConfigModule],
 			inject: [ConfigService],
 			useFactory: async (configService: ConfigService) => ({
-				type: 'mysql',
+				type: 'postgres',
 				autoLoadEntities: true,
 				synchronize: true,
 				host: configService.get('DB_HOST'),
